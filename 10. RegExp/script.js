@@ -6,8 +6,8 @@
 // 3. *Номером телефона.
 
 const input = prompt("Введите дату, email или номер телефона: ");
-const regexpDate = /[0-9]{2}\.+[0-9]{2}\.+[0-9]{4}/;
-const regexpEmail = /[a-zA-Z_\.0-9]+@[a-z0-9]+\.[a-z]{2,5}/;
+const regexpDate = /\d{1,2}[\.\/]\d{2}[\.\/]\d{2,4}/;
+const regexpEmail = /[a-zA-Z_\.\d]+@[a-z\d]+\.[a-z]{2,5}/;
 const regexpPhonenumber = [/[0-9]{11}/,/\+7+[0-9]{10}/,/7+\s+[0-9]{3}\s+[0-9]{7}/];
 
 if (regexpDate.test(input)){
