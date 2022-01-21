@@ -1,0 +1,21 @@
+// Пользователь вводит текстовую строку. Определить с
+// помощью регулярного выражения, является ли
+// введённая строка:
+// 1. Датой.
+// 2. Адресом электронной почты.
+// 3. *Номером телефона.
+
+const input = prompt("Введите дату, email или номер телефона: ");
+const regexpDate = /[0-9]{2}\.+[0-9]{2}\.+[0-9]{4}/;
+const regexpEmail = /[a-zA-Z_\.0-9]+@[a-z0-9]+\.[a-z]{2,5}/;
+const regexpPhonenumber = [/[0-9]{11}/,/\+7+[0-9]{10}/,/7+\s+[0-9]{3}\s+[0-9]{7}/];
+
+if (regexpDate.test(input)){
+    alert('Valid Date');
+} else if (regexpEmail.test(input)){
+    alert('Valid Email');
+} else if (regexpPhonenumber[0].test(input)||regexpPhonenumber[1].test(input)||regexpPhonenumber[2].test(input)){
+    alert('Valid Phone number');
+} else {
+    alert('Valid value not found');
+}
