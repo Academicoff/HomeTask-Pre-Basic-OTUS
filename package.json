@@ -1,0 +1,27 @@
+{
+  "name": "hometask",
+  "version": "1.0.0",
+  "description": "Репозиторий с домашними заданиями по подготовительному курсу JS OTUS\r ======\r Домашнее задание №1 «Линейные алгоритмы»\r ------",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Academicoff/HomeTask-Pre-Basic-OTUS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Academicoff/HomeTask-Pre-Basic-OTUS/issues"
+  },
+  "homepage": "https://github.com/Academicoff/HomeTask-Pre-Basic-OTUS#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.0",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
+  }
+}
