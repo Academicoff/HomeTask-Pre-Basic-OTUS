@@ -9,7 +9,10 @@
 export function sum(a, b){
     return a + b;
 }
-export function product(a, b){
+export function prod(a, b){
     return a * b;
 }
-console.log("a * b = " + product(a, b) + "| a + b = " + sum(a, b));
+
+export function result(sum,prod){
+    return console.log("Product " + prod + " Sum " + sum);
+}
