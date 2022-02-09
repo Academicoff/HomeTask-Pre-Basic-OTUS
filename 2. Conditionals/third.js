@@ -1,4 +1,4 @@
-/*В переменных circle и square хранятся площади круга
+/* В переменных circle и square хранятся площади круга
 и квадрата соответственно. Написать программу,
 которая определяет, поместится ли круг в квадрат.
 
@@ -6,6 +6,6 @@
 Сторона квадрата: квадратный корень из площади (a * a = s => a = sqrt(s))
 Диаметр круга: 2 х Корень из (Площадь/Pi)
 */
-let circle = 12;
-let square = 16;
-(2 * Math.sqrt(circle / Math.PI)) <= (Math.sqrt(square)) ? console.log("Помещается"): console.log("Не помещается");
+const circle = 12;
+const square = 16;
+(2 * Math.sqrt(circle / Math.PI)) <= (Math.sqrt(square)) ? console.log('Помещается') : console.log('Не помещается');

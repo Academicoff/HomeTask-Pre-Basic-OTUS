@@ -11,26 +11,26 @@
 // 3.*Если параграфов становится больше 5, первый из
 // них удаляется.
 
-const buttonText = document.querySelector(".button-text");
-const inputText = document.querySelector(".input-text");
-const bodyBlock = document.querySelector(".body-block");
+const buttonText = document.querySelector('.button-text');
+const inputText = document.querySelector('.input-text');
+const bodyBlock = document.querySelector('.body-block');
 
-inputText.addEventListener('input',textInput);
-buttonText.addEventListener('click',buttonTextClick);
+inputText.addEventListener('input', textInput);
+buttonText.addEventListener('click', buttonTextClick);
 
-function textInput(){
-    buttonText.hidden = '' !== inputText.value ? false : true;
+function textInput() {
+  buttonText.hidden = inputText.value === '';
 }
 
 let count = 3;
-function buttonTextClick(){
-    console.log(count);
-    if (count === 5) {
-        document.querySelector('p').remove();
-        count--;
-    }
-    let par = document.createElement('p');
-    par.innerHTML = `<p> ${inputText.value} </p>`
-    bodyBlock.append(par);
-    count++;
+function buttonTextClick() {
+  console.log(count);
+  if (count === 5) {
+    document.querySelector('p').remove();
+    count--;
+  }
+  const par = document.createElement('p');
+  par.innerHTML = `<p> ${inputText.value} </p>`;
+  bodyBlock.append(par);
+  count++;
 }

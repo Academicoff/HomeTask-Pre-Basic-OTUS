@@ -1,4 +1,4 @@
-/*[x] Создайте объект user, содержащий поле name со
+/* [x] Создайте объект user, содержащий поле name со
 значением ‘John’.
 
 [x] 1. Запросить у пользователя ввод числа. Записать
@@ -10,15 +10,15 @@
 
 [x] 3. *Записать все значения полей объекта admin в
 отдельные переменные. Имена переменных
-должны совпадать с названиями полей.*/
+должны совпадать с названиями полей. */
 
-//first
+// first
 const user = {
-    name: "John",
-    age() {
-        this.name = prompt("Сколько лет User'у? Введите число");
-        console.log(this.name);
-    }
+  name: 'John',
+  age() {
+    this.name = prompt("Сколько лет User'у? Введите число");
+    console.log(this.name);
+  },
 };
 user.age();
 
@@ -26,13 +26,13 @@ const input = prompt("Сколько лет User'у? Введите число")
 user.age = input;
 console.log(user.age);
 
-//second
-let admin = Object.assign({}, user);
-admin.role = "admin";
+// second
+const admin = { ...user };
+admin.role = 'admin';
 console.log(admin.role);
 
-//let admin = {...user, role:{...role}};
+// let admin = {...user, role:{...role}};
 
-//third
-let { name, age, role } = admin;
-console.log(`name: ${name} age: ${age} role: ${role}`)
+// third
+const { name, age, role } = admin;
+console.log(`name: ${name} age: ${age} role: ${role}`);
